@@ -1,7 +1,6 @@
 # From Halan to Annala
 request = require 'superagent'
 cheerio = require 'cheerio'
-# cookie = require 'cookie'
 fs = require 'fs'
 
 # Personal info
@@ -122,6 +121,8 @@ main = (info, next) ->
       else
         throw "Can not connect to the https://cas.xjtu.edu.cn/login"
 
+
+# Example
 # ac('http://xkfw.xjtu.edu.cn/xsxk/index.xk')
 main pinfo, () ->
   ac 'http://xkfw.xjtu.edu.cn/xsxk/index.xk', (res) ->
@@ -130,9 +131,3 @@ main pinfo, () ->
     ac 'http://xkfw.xjtu.edu.cn/xsxk/jctslkc.xk', (res) ->
       $ = cheerio.load res.text
       console.log $('#dialog-ysb').html()
-
-# console.log cookie[1].urlhead.test('https://cas.xjtu.edu.cn/login?service=http%3A%2F%2Fxkfw.xjtu.edu.cn%2Fxsxk%2Findex.xk')
-
-# cookie 'http://xkfw.xjtu.edu.cn/xsxk/index.xk', 'JSESSIONID=0000yIgGplaUa331JU8r5zHlfbY:16c5pv2nc;  Path=/'
-# console.log cookie()
-# console.log cookie 'http://xkfw.xjtu.edu.cn/xsxk/index.xk'
