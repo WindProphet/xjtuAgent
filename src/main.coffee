@@ -23,7 +23,7 @@ cookieinfo = [
   {
     tag: 'xkfw'
     urlhead: /^http:\/\/xkfw\.xjtu\.edu\.cn/
-    cookie: 'JSESSIONID=0000q8D07C8J3XMkJIiIjXcSfDK:16c5pv2nc;'
+    cookie: null
   }
   {
     tag: 'ssfw'
@@ -33,7 +33,7 @@ cookieinfo = [
   {
     tag: 'cas'
     urlhead: /^https:\/\/cas\.xjtu\.edu\.cn/
-    cookie: 'CASTGC=TGT-68685-GpUEwS71Pptji2fempddfaP6zdablynXMm9fSVGjS6C2ccauIl-gdscas01;'
+    cookie: null
   }
 ]
 
