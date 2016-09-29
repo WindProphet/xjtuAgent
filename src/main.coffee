@@ -130,4 +130,4 @@ main pinfo, () ->
     console.log $('title').text()
     ac 'http://xkfw.xjtu.edu.cn/xsxk/jctslkc.xk', (res) ->
       $ = cheerio.load res.text
-      console.log $('#dialog-ysb').html()
+      console.log res.text
