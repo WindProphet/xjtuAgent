@@ -3,6 +3,7 @@ class xjtuAgent {
     this.state  = {}
     this.queues = []
     this.token  = {}
+    this.result = {}
   }
 
   info(
@@ -94,7 +95,7 @@ class xjtuAgent {
         if (v.depend == type) {a.splice(i,1)}
       })
       this.state[type] = "done"
-      console.log(`${type} done ${new Date().toJSON()}`);
+      console.error(`${type} done ${new Date().toJSON()}`);
       return
     }
 
