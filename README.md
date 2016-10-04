@@ -12,31 +12,30 @@ $ npm install xjtuagent
 
 ## Usage
 
+一键选课
+
 ```js
-var xjtuagent = require('xjtuagent');
-var ssfw = require('xjtu-ssfw');
+const xjtuagent = require('xjtuagent');
 
-info = {
-  username: "myNetID", // your XJTU NetID
-  password: "myIDpass" // your NetID's password
-}
+var my = new xjtuagent();
 
-var xjtu = new xjtuagent();
+my.info(
+  "username", // your XJTU NetID
+  "password" // your NetID's password
+)
 
-xjtu
-  .set(info)
-  .login(function(status) {
-    if (!status.err) {
-      console.log('login success');
-    }
-    else {
-      console.log('login error');
-      this.repeat = true;
+my.queue("ssfw_evaluation", () => {
+  my.result.teacher.forEach((v, i, a) => {
+    if (1) {
+      console.log(i, v['课程名称']);
+      my.use("ssfw_evaluation_set", v, {
+        eval: "先生ちゃん大好き",
+        advice: "希望老师多和学生互动",
+        opts: [4,4,4,4,4,4,4,4,4,4]
+      })
     }
   })
-  .use(ssfw)
-  .ssfw
-  .start()
+})
 
 ```
 

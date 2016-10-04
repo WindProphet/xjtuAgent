@@ -4,9 +4,7 @@
   "description": "An agent for using XJTU's students' service.",
   "main": "main.js",
   "scripts": {
-    "test": "coffee test.coffee",
-    "start": "coffee main.coffee",
-    "clear": "rm tmp_files/*"
+
   },
   "keywords": [
     "xjtu"
@@ -14,8 +12,14 @@
   "author": "WindProphet",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^0.20.0",
-    "cookie": "^0.2.3",
-    "superagent": "^1.8.3"
-  }
+    "cheerio": "^0.22.0",
+    "superagent": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WindProphet/xjtuAgent"
+  },
+  "bugs": {
+    "url": "https://github.com/WindProphet/xjtuAgent/issues"
+  },
 }
